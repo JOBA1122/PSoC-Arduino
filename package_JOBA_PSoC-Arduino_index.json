@@ -1,0 +1,36 @@
+{
+  "packages": [
+    {
+      "name": "PSoC-Arduino",
+      "maintainer": "John Bayron",
+      "websiteURL": "https://github.com/SpenceKonde/ATTinyCore",
+      "email": "",
+      "help": {
+        "online": ""
+      },
+      "platforms": [
+        {
+          "name": "PSoC-Arduino",
+          "architecture": "ARM",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "help": {
+            "online": ""
+          },
+          "url": "https://github.com/SpenceKonde/ATTinyCore/archive/v1.0.4.tar.gz",
+          "archiveFileName": "ATTinyCore-1.0.4.tar.gz",
+          "checksum": "SHA-256:c647ad9efebbb44ce50153c0598b8152b6df381d0a77333e3f75c9afddad33bf",
+          "size": "249576",
+          "boards": [
+            {"name": "PSarduinoC"}
+           }
+          ],
+          "toolsDependencies": []
+        } 
+          
+      ],
+      "tools": []
+    },
+    
+  ]
+}
