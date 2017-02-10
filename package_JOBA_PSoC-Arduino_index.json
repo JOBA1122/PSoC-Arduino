@@ -3,7 +3,7 @@
     {
       "name": "PSoC-Arduino",
       "maintainer": "John Bayron",
-      "websiteURL": "https://github.com/SpenceKonde/ATTinyCore",
+      "websiteURL": "https://github.com/JOBA1122/PSoC-Arduino",
       "email": "",
       "help": {
         "online": ""
@@ -17,8 +17,8 @@
           "help": {
             "online": ""
           },
-          "url": "https://github.com/SpenceKonde/ATTinyCore/archive/v1.0.4.tar.gz",
-          "archiveFileName": "ATTinyCore-1.0.4.tar.gz",
+          "url": "https://github.com/JOBA1122/PSoC-Arduino.git",
+          "archiveFileName": "PSoCArduinorepo",
           "checksum": "SHA-256:c647ad9efebbb44ce50153c0598b8152b6df381d0a77333e3f75c9afddad33bf",
           "size": "249576",
           "boards": [
