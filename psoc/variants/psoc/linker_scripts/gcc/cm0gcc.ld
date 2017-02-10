@@ -21,10 +21,10 @@ SEARCH_DIR(.)
 GROUP(-lgcc -lc -lnosys)
 
 
-/* Code sharing support */
-INCLUDE C:\Users\JOBA\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.11\variants\psoc\linker_scripts\gcc\cycodeshareexport.ld
-INCLUDE C:\Users\JOBA\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.11\variants\psoc\linker_scripts\gcc\cycodeshareimport.ld
-
+/* Code sharing support 
+*INCLUDE C:\Users\JOBA\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.11\variants\psoc\linker_scripts\gcc\cycodeshareexport.ld
+*INCLUDE C:\Users\JOBA\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.11\variants\psoc\linker_scripts\gcc\cycodeshareimport.ld
+*/
 
 MEMORY
 {

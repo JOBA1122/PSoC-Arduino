@@ -75,16 +75,16 @@ void loop( void ) ;
   //#include "WString.h"
   //#include "Tone.h"
   //#include "WMath.h"
-  #include "HardwareSerial.h"
+  //#include "HardwareSerial.h"
   //#include "pulse.h"
 #endif
 #include "delay.h"
 #ifdef __cplusplus
-  #include "Uart.h"
+  //#include "Uart.h"
 #endif
 
 // Include board variant
-#include "variant.h"
+//#include "variant.h"
 
 //#include "wiring.h"
 #include "wiring_digital.h"
