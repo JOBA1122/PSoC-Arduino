@@ -23,7 +23,7 @@
           "size": "249576",
           "boards": [
             {"name": "PSarduinoC"}
-           }
+           
           ],
           "toolsDependencies": []
         } 
