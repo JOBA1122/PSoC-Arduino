@@ -18,9 +18,26 @@
 
 #ifndef HardwareSerial_h
 #define HardwareSerial_h
-
+#include "cytypes.h"
 #include <inttypes.h>
+#ifdef __cplusplus
+//#include "Stream.h"
+/* 
+#define HARDSER_PARITY_EVEN (0x1ul)
+#define HARDSER_PARITY_ODD	(0x2ul)
+#define HARDSER_PARITY_NONE (0x3ul)
+#define HARDSER_PARITY_MASK	(0xFul)
 
+#define HARDSER_STOP_BIT_1		(0x10ul)
+#define HARDSER_STOP_BIT_1_5	(0x20ul)
+#define HARDSER_STOP_BIT_2	 	(0x30ul)
+#define HARDSER_STOP_BIT_MASK	(0xF0ul)
+
+#define HARDSER_DATA_5	 	(0x100ul)
+#define HARDSER_DATA_6	 	(0x200ul)
+#define HARDSER_DATA_7	 	(0x300ul)
+#define HARDSER_DATA_8	 	(0x400ul)
+#define HARDSER_DATA_MASK	(0xF00ul)
 
 #define SERIAL_5N1	(HARDSER_STOP_BIT_1 | HARDSER_PARITY_NONE | HARDSER_DATA_5)
 #define SERIAL_6N1	(HARDSER_STOP_BIT_1 | HARDSER_PARITY_NONE | HARDSER_DATA_6)
@@ -46,15 +63,24 @@
 #define SERIAL_6O2	(HARDSER_STOP_BIT_2 | HARDSER_PARITY_ODD  | HARDSER_DATA_6)
 #define SERIAL_7O2	(HARDSER_STOP_BIT_2 | HARDSER_PARITY_ODD  | HARDSER_DATA_7)
 #define SERIAL_8O2	(HARDSER_STOP_BIT_2 | HARDSER_PARITY_ODD  | HARDSER_DATA_8)
-
+ */
 class HardwareSerial 
 {
   public:
     virtual void begin(unsigned long);
     virtual void begin(unsigned long baudrate, uint16_t config);
-    
-};
+	virtual void print(const char8 wordp[]);
+    //virtual void end();
+	//virtual char8 read();
+	/* 
+    virtual int peek(void) = 0;
+    virtual int read(void) = 0;
+    virtual void flush(void) = 0;
+    virtual size_t write(uint8_t) = 0;
+    using Print::write; // pull in write(str) and write(buf, size) from Print
+    virtual operator bool() = 0;*/
+}; 
 
-extern void serialEventRun(void) __attribute__((weak));
-
+//extern void serialEventRun(void) __attribute__((weak));
+#endif
 #endif

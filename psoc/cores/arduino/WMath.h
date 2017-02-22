@@ -16,21 +16,18 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "SERCOM.h"
-#include "variant.h"
+#ifndef _WIRING_MATH_
+#define _WIRING_MATH_
 
-/* SERCOM::SERCOM(Sercom* s)
-{
-  sercom = s;
-}
- */
-/* 	=========================
- *	===== Sercom UART
- *	=========================
-*/
-void SERCOM::initUART()
-{
-  
-}
+extern long random( long ) ;
+extern long random( long, long ) ;
+extern void randomSeed( uint32_t dwSeed ) ;
+extern long map( long, long, long, long, long ) ;
+
+extern uint16_t makeWord( uint16_t w ) ;
+extern uint16_t makeWord( uint8_t h, uint8_t l ) ;
+
+#define word(...) makeWord(__VA_ARGS__)
 
 
+#endif /* _WIRING_MATH_ */

@@ -19,7 +19,7 @@
 #if !defined(CY_SCB_SPI_UART_UART_H)
 #define CY_SCB_SPI_UART_UART_H
 
-#include "UART.h"
+#include "UART1.h"
 
 
 /***************************************

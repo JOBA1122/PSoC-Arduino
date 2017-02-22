@@ -27,7 +27,6 @@
     #define CY_CPUSS_CONFIG_VECT_IN_RAM (( uint32 ) 0x01)
 #endif /* (CY_IP_CPUSS_CM0) */
 
-
 #if (CY_IP_CPUSS_CM0)
     /* CPUSS Configuration register */
     #define CY_CPUSS_CONFIG_REG         (*(reg32 *) CYREG_CPUSS_CONFIG)
@@ -362,7 +361,7 @@ void Start_c(void)
 			  setup();
 
 			  for (;;)
-			  {
+			  { 
 				loop();
 				//if (serialEventRun) serialEventRun();
 			  }

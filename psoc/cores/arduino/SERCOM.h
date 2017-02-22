@@ -18,23 +18,82 @@
 
 #ifndef _SERCOM_CLASS_
 #define _SERCOM_CLASS_
-//#include "variant.h"
+
+//#include "sam.h"
+#ifdef __cplusplus
 
 class SERCOM
 {
 	public:
-		SERCOM(Sercom* s) ;
+		//SERCOM(Sercom* s) ;
 
 		/* ========== UART ========== */
-		void Uartinit(uint32_t baudrate, uint32_t config) ;
-		
+		void initUART() ;
+		/* void initFrame(SercomUartCharSize charSize, SercomDataOrder dataOrder, SercomParityMode parityMode, SercomNumberStopBit nbStopBits) ;
+		void initPads(SercomUartTXPad txPad, SercomRXPad rxPad) ;
 
-		void stopUART() ;
-		void startUART() ;
-		
+		void resetUART( void ) ;
+		void enableUART( void ) ;
+		void flushUART( void ) ;
+		void clearStatusUART( void ) ;
+		bool availableDataUART( void ) ;
+		bool isBufferOverflowErrorUART( void ) ;
+		bool isFrameErrorUART( void ) ;
+		bool isParityErrorUART( void ) ;
+		bool isDataRegisterEmptyUART( void ) ;
+		uint8_t readDataUART( void ) ;
+		int writeDataUART(uint8_t data) ;
+		bool isUARTError() ;
+		void acknowledgeUARTError() ;
+
+		 //========== SPI ========== 
+		void initSPI(SercomSpiTXPad mosi, SercomRXPad miso, SercomSpiCharSize charSize, SercomDataOrder dataOrder) ;
+		void initSPIClock(SercomSpiClockMode clockMode, uint32_t baudrate) ;
+
+		void resetSPI( void ) ;
+		void enableSPI( void ) ;
+		void disableSPI( void ) ;
+		void setDataOrderSPI(SercomDataOrder dataOrder) ;
+		SercomDataOrder getDataOrderSPI( void ) ;
+		void setBaudrateSPI(uint8_t divider) ;
+		void setClockModeSPI(SercomSpiClockMode clockMode) ;
+		uint8_t transferDataSPI(uint8_t data) ;
+		bool isBufferOverflowErrorSPI( void ) ;
+		bool isDataRegisterEmptySPI( void ) ;
+		bool isTransmitCompleteSPI( void ) ;
+		bool isReceiveCompleteSPI( void ) ;
+
+		// ========== WIRE ========== 
+		void initSlaveWIRE(uint8_t address) ;
+		void initMasterWIRE(uint32_t baudrate) ;
+
+		void resetWIRE( void ) ;
+		void enableWIRE( void ) ;
+    void disableWIRE( void );
+    void prepareNackBitWIRE( void ) ;
+    void prepareAckBitWIRE( void ) ;
+    void prepareCommandBitsWire(uint8_t cmd);
+		bool startTransmissionWIRE(uint8_t address, SercomWireReadWriteFlag flag) ;
+		bool sendDataMasterWIRE(uint8_t data) ;
+		bool sendDataSlaveWIRE(uint8_t data) ;
+		bool isMasterWIRE( void ) ;
+		bool isSlaveWIRE( void ) ;
+		bool isBusIdleWIRE( void ) ;
+		bool isBusOwnerWIRE( void ) ;
+		bool isDataReadyWIRE( void ) ;
+		bool isStopDetectedWIRE( void ) ;
+		bool isRestartDetectedWIRE( void ) ;
+		bool isAddressMatch( void ) ;
+		bool isMasterReadOperationWIRE( void ) ;
+    bool isRXNackReceivedWIRE( void ) ;
+		int availableWIRE( void ) ;
+		uint8_t readDataWIRE( void ) ; */
+
 	private:
-		Sercom* sercom;
-		 
+		//Sercom* sercom;
+		//uint8_t calculateBaudrateSynchronous(uint32_t baudrate) ;
+		//uint32_t division(uint32_t dividend, uint32_t divisor) ;
+		//void initClockNVIC( void ) ;
 };
-
+#endif
 #endif

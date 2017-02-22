@@ -45,7 +45,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-        Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+        Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
         flag0=1;
          break;
        }
@@ -81,7 +81,7 @@ void pinMode(uint32_t pin, uint32_t mode)
        {
        case 1://ENTRADA
        {
-         Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+         Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
          flag1=1;
          break;
        }
@@ -117,7 +117,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-         Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+         Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
          flag2=1;
          break;
         }
@@ -153,7 +153,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-         Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+         Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
          flag3=1;
          break;
        }
@@ -189,7 +189,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-        Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+        Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
         flag4=1;
         break;
        }
@@ -225,7 +225,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-        Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+        Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
         flag5=1;
         break;
         }
@@ -261,7 +261,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-        Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+        Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
         flag6=1;
         break;
        }
@@ -297,7 +297,7 @@ void pinMode(uint32_t pin, uint32_t mode)
       {
        case 1://ENTRADA
        {
-         Control_PIN1_Write((Control_PIN1_Read() AND  ~(1<<pin)));
+         Control_PIN1_Write((Control_PIN1_Read() OR  (1<<pin)));
          flag7=1;
          break;
        }

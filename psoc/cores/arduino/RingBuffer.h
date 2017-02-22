@@ -16,21 +16,35 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "SERCOM.h"
-#include "variant.h"
+#ifndef _RING_BUFFER_
+#define _RING_BUFFER_
 
-/* SERCOM::SERCOM(Sercom* s)
+#include <stdint.h>
+
+// Define constants and variables for buffering incoming serial data.  We're
+// using a ring buffer (I think), in which head is the index of the location
+// to which to write the next incoming character and tail is the index of the
+// location from which to read.
+#define SERIAL_BUFFER_SIZE 64
+
+class RingBuffer
 {
-  sercom = s;
-}
- */
-/* 	=========================
- *	===== Sercom UART
- *	=========================
-*/
-void SERCOM::initUART()
-{
-  
-}
+  public:
+    uint8_t _aucBuffer[SERIAL_BUFFER_SIZE] ;
+    int _iHead ;
+    int _iTail ;
 
+  public:
+    RingBuffer( void ) ;
+    void store_char( uint8_t c ) ;
+	void clear();
+	int read_char();
+	int available();
+	int peek();
+	bool isFull();
 
+  private:
+	int nextIndex(int index);
+} ;
+
+#endif /* _RING_BUFFER_ */
